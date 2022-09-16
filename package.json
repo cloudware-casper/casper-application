@@ -1,0 +1,19 @@
+{
+  "name": "@cloudware-casper/casper-application",
+  "main": "casper-application.js",
+  "version": "0.0.1",
+  "description": "casper-application is a base class for casper SPA",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@cloudware-casper/casper-broker": "^1.x",
+    "@cloudware-casper/casper-print-dialog": "^2.x",
+    "@cloudware-casper/casper-socket": "^5.x",
+    "@cloudware-casper/casper-timed-status": "^0.x",
+    "@cloudware-casper/casper-toast": "^2.x",
+    "@cloudware-casper/casper-tooltip": "^1.x",
+    "@cloudware-casper/casper-utils": "^1.x",
+    "lit": "^2.x"
+  }
+}
