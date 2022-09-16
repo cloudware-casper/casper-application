@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@cloudware-casper/casper-broker": "^1.x",
+    "@cloudware-casper/casper-pages": "^0.x",
     "@cloudware-casper/casper-print-dialog": "^2.x",
     "@cloudware-casper/casper-socket": "^5.x",
     "@cloudware-casper/casper-timed-status": "^0.x",

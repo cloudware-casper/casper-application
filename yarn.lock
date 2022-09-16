@@ -24,6 +24,13 @@
   dependencies:
     "@polymer/iron-overlay-behavior" "^3.x"
 
+"@cloudware-casper/casper-pages@^0.x":
+  version "0.0.4"
+  resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-pages/0.0.4/903967f8792e2bb615dba21f9516687bb33474e1#903967f8792e2bb615dba21f9516687bb33474e1"
+  integrity sha512-r0m3LEddtTBmKV46iuUquG/0fuSZP3PZzmp/LSTO93Af03l9JKdirXn1AKNEYFrUYb77pMWtGPn2bKyEH4lINA==
+  dependencies:
+    lit "^2.x"
+
 "@cloudware-casper/casper-print-dialog@^2.x":
   version "2.1.1"
   resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-print-dialog/2.1.1/e1d2df0107dd0e4f675353a7e17faaa68ed7eb66#e1d2df0107dd0e4f675353a7e17faaa68ed7eb66"
