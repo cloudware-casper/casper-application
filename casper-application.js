@@ -68,7 +68,7 @@ export class CasperApplication extends LitElement {
         --casper-timed-status-icon-check: /static/icons/check;
         --casper-timed-status-icon-error: /static/icons/error;
         --casper-timed-status-icon-timeout: /static/icons/timeout;
-        --casper-timed-status-countdown-color: #8bc34a;
+        --casper-timed-status-countdown-color: #444;
       }
 
       h1 {
