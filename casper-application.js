@@ -72,11 +72,8 @@ export class CasperApplication extends LitElement {
       }
 
       h1 {
-        font-size: 20px;
-        font-style: normal;
+        font-size: 1.25rem;
         font-weight: 700;
-        line-height: 24px;
-        letter-spacing: 0px;
         text-align: center;
         max-width: 300px;
       }
@@ -86,13 +83,16 @@ export class CasperApplication extends LitElement {
       }
 
       .overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
         color: #FFF;
         background-color: rgba(0, 0, 0, 0.5);
         box-shadow: inset 0px 0px 40px -10px rgba(0, 0, 0, 0.2);
