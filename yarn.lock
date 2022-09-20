@@ -45,9 +45,9 @@
   integrity sha512-MXOJsVgwNlFgYNCndxBvpl/EmCLoA9B1KPJOMIQV6dj8xnvmfeWKubdI9BvGPsZoLcqk0+k11aVxFpj3FqDnIA==
 
 "@cloudware-casper/casper-timed-status@^0.x":
-  version "0.0.8"
-  resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-timed-status/0.0.8/a08a1acd68e3c22e0daf3706ed6025345cb72043#a08a1acd68e3c22e0daf3706ed6025345cb72043"
-  integrity sha512-JZekEW63ZD9BgNHR/qHqb1P81oiBz+o6h/ZI02nCaMIvHdCtbDYKqsQmmzLH09A79osKpf+X9mteoTdnjItg+A==
+  version "0.0.11"
+  resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-timed-status/0.0.11/32eb302a4af5e191f6044db9f524407a06faa170#32eb302a4af5e191f6044db9f524407a06faa170"
+  integrity sha512-eP0KOWCS0on+T+7RGLo+5McxLwXbA7PrGuHGM+PtBRgxNtgOhfjkj8d/7HV8xYndZbg0JiHRxTBU87g2BBPLEA==
   dependencies:
     "@cloudware-casper/casper-icons" "^3.x"
 
