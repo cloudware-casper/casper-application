@@ -379,7 +379,7 @@ export class CasperApplication extends LitElement {
     });
 
     this.socket.addEventListener('casper-disconnected', (e) => {
-      this._state   = 'disconnected';
+      this._state   = 'pending';
       this._message = 'Sessão desligada';
     });
     this.socket.addEventListener('casper-signed-in', (e) => {
@@ -397,7 +397,7 @@ export class CasperApplication extends LitElement {
       } else if (e?.detail?.spinner) {
         this._state = 'connecting';
       } else {
-        this._state = 'pending';
+        this._state = 'unknown';
       }
       this._message = event?.detail?.message;
     }); 
@@ -472,7 +472,7 @@ export class CasperApplication extends LitElement {
       this.logout();
       return;
     }
-    if (this._state === 'disconnected' || !this.session) {
+    if (this._state === 'disconnected' || this._state === 'pending' || !this.session) {
       this._reconnectSocket();
     }
   }
@@ -483,7 +483,7 @@ export class CasperApplication extends LitElement {
       this._debounceTimerId = undefined;
     }
 
-    if ((this._state === 'disconnected' || !this.session) && this._debounceTimerId === undefined) {
+    if ((this._state === 'disconnected' || this._state === 'pending' || !this.session) && this._debounceTimerId === undefined) {
       this._debounceTimerId = setTimeout(e => debounceTimerExpired(e), this._debounceTimeout * 1000);
       this._state = 'connecting';
       this._message = 'A restabelecer ligação ao servidor';
