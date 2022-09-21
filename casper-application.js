@@ -66,6 +66,7 @@ export class CasperApplication extends LitElement {
         --casper-timed-status-ring-color: #FFF;
         --casper-timed-status-progress-color: var(--primary-color);
         --casper-timed-status-countdown-color: #444;
+        --casper-timed-status-timeout-color: transparent;
       }
 
       h1 {
@@ -380,7 +381,6 @@ export class CasperApplication extends LitElement {
 
     this.socket.addEventListener('casper-disconnected', (e) => {
       this._state   = 'pending';
-      this._message = 'Sessão desligada';
     });
     this.socket.addEventListener('casper-signed-in', (e) => {
       this._state   = 'ready';
@@ -394,6 +394,8 @@ export class CasperApplication extends LitElement {
     this.socket.addEventListener('casper-show-overlay', (e) => {
       if (e?.detail?.icon === 'error') {
         this._state = 'error';
+      } else if (e?.detail?.icon === 'cloud') {
+        this._state = 'pending';
       } else if (e?.detail?.spinner) {
         this._state = 'connecting';
       } else {
