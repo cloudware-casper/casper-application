@@ -154,7 +154,7 @@ export class CasperApplication extends LitElement {
     this.socket2.app = this;
 
     this.broker = new CasperBroker();
-    this.broker.apiBaseUrl = `${window.location.origin}/api`; // todo config broker set to api.cloudware.pt or api.toconline.pt  
+    this.apiBaseUrl = '/api';
 
     this._state = 'connecting';
     this._message = 'A estabelecer ligação ao servidor';
@@ -218,6 +218,8 @@ export class CasperApplication extends LitElement {
 
   async _init () {
     await this.updateComplete;
+
+    this.broker.apiBaseUrl = `${window.location.origin}${this.apiBaseUrl}`;
 
     let issuerUrl = window.location.href;
     if (window.localStorage.getItem('casper_original_issuer')) issuerUrl = window.localStorage.getItem('casper_original_issuer');
