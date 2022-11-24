@@ -222,7 +222,9 @@ export class CasperApplication extends LitElement {
     this.broker.apiBaseUrl = `${window.location.origin}${this.apiBaseUrl}`;
 
     let issuerUrl = window.location.href;
-    if (window.localStorage.getItem('casper_original_issuer')) issuerUrl = window.localStorage.getItem('casper_original_issuer');
+    if (this.useLocalStorage && window.localStorage.getItem('casper_original_issuer')) {
+      issuerUrl = window.localStorage.getItem('casper_original_issuer');
+    }
     const urlHref = new URL(issuerUrl);
     const socketUrl = `${urlHref.protocol === 'https:' ? 'wss:' : 'ws:'}//${urlHref.hostname}${urlHref.port ? ':' + urlHref.port : ''}/epaper`;
     const socket2Url = `${urlHref.protocol === 'https:' ? 'wss:' : 'ws:'}//${urlHref.hostname}${urlHref.port ? ':' + urlHref.port : ''}/epaper2`;
