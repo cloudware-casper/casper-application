@@ -230,11 +230,13 @@ export class CasperApplication extends LitElement {
     const socket2Url = `${urlHref.protocol === 'https:' ? 'wss:' : 'ws:'}//${urlHref.hostname}${urlHref.port ? ':' + urlHref.port : ''}/epaper2`;
 
     try {
-      this.session = await this.socket.connectAndSetSession(socketUrl, this.socket.sessionCookie); // TODO just one call to socket
+      this.session = await this.socket.connectAndSetSession(socketUrl, this.socket.sessionCookie);
+      this.socket._url = `${urlHref.protocol === 'https:' ? 'wss:' : 'ws:'}//${urlHref.hostname}`; // Manually set socket url
 
       if (!this.session.success) throw 'Invalid session';
 
-      await this.socket2.connectAndSetSession(socket2Url, this.socket.sessionCookie); // TODO just one call to socket
+      await this.socket2.connectAndSetSession(socket2Url, this.socket.sessionCookie);
+      this.socket2._url = `${urlHref.protocol === 'https:' ? 'wss:' : 'ws:'}//${urlHref.hostname}`; // Manually set socket url
     } catch (error) {
       await this.logout();
       return;
