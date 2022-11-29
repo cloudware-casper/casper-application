@@ -138,6 +138,14 @@ export class CasperApplication extends LitElement {
     return false;
   }
 
+  get originalIssuer () {
+    let locationOrigin = window.location.origin;
+    if (this.useLocalStorage && window.localStorage.getItem('casper_original_issuer')) {
+      locationOrigin = window.localStorage.getItem('casper_original_issuer');
+    }
+    return locationOrigin;
+  }
+
   constructor () {
     super();
     window.app = this;
@@ -221,11 +229,7 @@ export class CasperApplication extends LitElement {
 
     this.broker.apiBaseUrl = `${window.location.origin}${this.apiBaseUrl}`;
 
-    let issuerUrl = window.location.href;
-    if (this.useLocalStorage && window.localStorage.getItem('casper_original_issuer')) {
-      issuerUrl = window.localStorage.getItem('casper_original_issuer');
-    }
-    const urlHref = new URL(issuerUrl);
+    const urlHref = new URL(this.originalIssuer);
     const socketUrl = `${urlHref.protocol === 'https:' ? 'wss:' : 'ws:'}//${urlHref.hostname}${urlHref.port ? ':' + urlHref.port : ''}/epaper`;
     const socket2Url = `${urlHref.protocol === 'https:' ? 'wss:' : 'ws:'}//${urlHref.hostname}${urlHref.port ? ':' + urlHref.port : ''}/epaper2`;
 
