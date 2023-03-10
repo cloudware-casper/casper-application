@@ -1,7 +1,7 @@
 {
   "name": "@cloudware-casper/casper-application",
   "main": "casper-application.js",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "casper-application is a base class for casper SPA",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
