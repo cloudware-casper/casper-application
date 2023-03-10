@@ -134,6 +134,10 @@ export class CasperApplication extends LitElement {
     return '/login';
   }
 
+  get signOutLocation () {
+    return '/login/sign-out';
+  }
+
   get useLocalStorage () {
     return false;
   }
@@ -567,9 +571,11 @@ export class CasperApplication extends LitElement {
   }
 
   async logout () {
+    if (!this.signOutLocation) return;
+
     try {
       if (this.socket.sessionCookie) {
-        const request = await fetch('/login/sign-out', {
+        const request = await fetch(this.signOutLocation, {
           headers: {
             'x-casper-access-token': this.socket.sessionCookie,
             'Content-Type': 'application/json'
