@@ -338,7 +338,7 @@ export class CasperApplication extends LitElement {
     const pageElement = this._searchOnRouter(this._buildLocationUrl(this._url.split(this.baseUrl)[1])); // TODO: Fix this
     if ( pageElement && pageElement.props && pageElement.props.component ) {
       pageName = pageElement.props.component;
-    } else if (!this.page) {
+    } else if (!pageElement) {
       this.showPage404();
       this._state = 'ready';
       return;
@@ -552,6 +552,7 @@ export class CasperApplication extends LitElement {
   }
 
   changeRoute (route) {
+    if (!route.includes(this.baseUrl)) route = this.baseUrl + (route.startsWith('/') ? route : ('/' + route));
     let [locationPath, locationQuery] = route.split('?');
 
     if (this.location.pathname === locationPath) {
