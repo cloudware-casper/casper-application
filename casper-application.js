@@ -335,10 +335,11 @@ export class CasperApplication extends LitElement {
     this._state = 'in-progress';
     
     let pageName;
-    const pageElement = this._searchOnRouter(this._buildLocationUrl(this._url.split(this.baseUrl)[1])); // TODO: Fix this
+    const locationUrl = this._buildLocationUrl(this._url.split(this.baseUrl)[1]);
+    const pageElement = this._searchOnRouter(locationUrl); // TODO: Fix this
     if ( pageElement && pageElement.props && pageElement.props.component ) {
       pageName = pageElement.props.component;
-    } else if (!pageElement) {
+    } else if (!pageElement && locationUrl !== '/') {
       this.showPage404();
       this._state = 'ready';
       return;
