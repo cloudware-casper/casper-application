@@ -246,6 +246,7 @@ export class CasperApplication extends LitElement {
       await this.socket2.connectAndSetSession(socket2Url, this.socket.sessionCookie);
       this.socket2._url = `${urlHref.protocol === 'https:' ? 'wss:' : 'ws:'}//${urlHref.hostname}`; // Manually set socket url
     } catch (error) {
+      console.error(error);
       await this.logout();
       return;
     }
