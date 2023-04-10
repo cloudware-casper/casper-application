@@ -426,7 +426,7 @@ export class CasperApplication extends LitElement {
       this._message = '';
     });
 
-    this.addEventListener(CasperBrowser.isIos ? 'tap' : 'click', e => this._globalClickHandler(e));
+    this.addEventListener('click', e => this._globalClickHandler(e));
     this.addEventListener('mousemove', this._mouseMoveHandler);
   }  
 
