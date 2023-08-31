@@ -541,11 +541,15 @@ export class CasperApplication extends LitElement {
     this.page = 'notfound404';
   }
 
-  openToast ({text, duration = 8000, backgroundColor = ''}) {
-    this.toast.text = text;
-    this.toast.duration = duration;
-    this.toast.backgroundColor = backgroundColor;
-    this.toast.open();
+  openToast ({text, duration = 8000, backgroundColor = '', type}) {
+    const options = {
+      text: text,
+      duration: duration,
+      background_color: backgroundColor
+    };
+
+    if (type) options.type = type;
+    this.toast.open(options);
   }
 
   showPrintDialog (options) {
