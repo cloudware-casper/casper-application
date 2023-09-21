@@ -10,9 +10,9 @@
     "@polymer/polymer" "^3.0.0"
 
 "@cloudware-casper/casper-icons@^3.x":
-  version "3.2.5"
-  resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-icons/3.2.5/6a0234f0b56f321c0152af4e3233c17736c60baa#6a0234f0b56f321c0152af4e3233c17736c60baa"
-  integrity sha512-/WCRlHpKoZtaUlhx5iQvHdb7qCcAyOZXPpq4XJ7WiWZF94q4QF1926Qk9sxELG4SIRlSxTzv47+a1cl67FBUZQ==
+  version "3.2.7"
+  resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-icons/3.2.7/16145caf17fe1ab9fb020eab0b34bb0d80518ac4#16145caf17fe1ab9fb020eab0b34bb0d80518ac4"
+  integrity sha512-E+6/LJc4PbgFd47mIFN72Gih3or4Zn+wvJhbe8WT1eOZ0DrdSRq5FVsjC9zRBnPZJji5k9d2d8s1Ow+49UGgvA==
   dependencies:
     ink-ripple alex-saunders/ink-ripple
     lit "^2.x"
@@ -52,13 +52,12 @@
     "@cloudware-casper/casper-icons" "^3.x"
 
 "@cloudware-casper/casper-toast@^2.x":
-  version "2.0.2"
-  resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-toast/2.0.2/7a76c8136f84fa82f236184a319d7ca27fc7041b#7a76c8136f84fa82f236184a319d7ca27fc7041b"
-  integrity sha512-X6ku1Ki8bkgvezJRvlZFGBFW6kgz3+zkVQJVYKoGPLe/kAMwUt2fs7RNNIinO5V32MdCXBTjgJneFTLs87coAg==
+  version "2.1.2"
+  resolved "https://npm.pkg.github.com/download/@cloudware-casper/casper-toast/2.1.2/442a003484f2624253ed1d8602048e249714e538#442a003484f2624253ed1d8602048e249714e538"
+  integrity sha512-aFJAb9JGSJdcjI+v6YjcXLLIuKAdx/jAsu7M0qScF3+hJg+tqXSJgmXL41um4dfzwTNrgipNIirzjSDIcWL7Rw==
   dependencies:
     "@cloudware-casper/casper-icons" "^3.x"
-    "@polymer/paper-toast" "^3.0.0"
-    "@polymer/polymer" "^3.0.0"
+    lit "^2.x"
 
 "@cloudware-casper/casper-tooltip@^1.x":
   version "1.5.1"
@@ -248,7 +247,7 @@
     "@polymer/iron-flex-layout" "^3.0.0-pre.26"
     "@polymer/polymer" "^3.0.0"
 
-"@polymer/paper-toast@^3.0.0", "@polymer/paper-toast@^3.x":
+"@polymer/paper-toast@^3.x":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@polymer/paper-toast/-/paper-toast-3.0.1.tgz#213aa3373909cee7c8e17299cf70fa2603bfb358"
   integrity sha512-pizuogzObniDdICUc6dSLrnDt2VzzoRne1gCmbD6sfOATVv5tc8UfrqhA2iHngbNBEbniBiciS3iogdp5KTVUQ==
@@ -359,11 +358,11 @@
     "@vaadin/vaadin-development-mode-detector" "^2.0.0"
 
 "@webcomponents/shadycss@^1.9.1":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.11.0.tgz#73e289996c002d8be694cd3be0e83c46ad25e7e0"
-  integrity sha512-L5O/+UPum8erOleNjKq6k58GVl3fNsEQdSOyh0EUhNmi7tHUyRuCJy1uqJiWydWcLARE5IPsMoPYMZmUGrz1JA==
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.11.2.tgz#7539b0ad29598aa2eafee8b341059e20ac9e1006"
+  integrity sha512-vRq+GniJAYSBmTRnhCYPAPq6THYqovJ/gzGThWbgEZUQaBccndGTi1hdiUP15HzEco0I6t4RCtXyX0rsSmwgPw==
 
-ink-ripple@alex-saunders/ink-ripple:
+"ink-ripple@github:alex-saunders/ink-ripple":
   version "0.0.0"
   resolved "https://codeload.github.com/alex-saunders/ink-ripple/tar.gz/88e4d753bba9f7b57b372c62a4517bb091c7f713"
 
